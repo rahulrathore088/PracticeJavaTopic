@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+	<changeSet id="AD-1.1" author="srahul">
+		<createTable tableName="USERS">
+			<column name="ACTOR_ID" type="numeric(16,0)">
+				<constraints primaryKey="true" primaryKeyName="actor_id_pk" />
+			</column>
+			<column name="USER_NAME" type="varchar(250)">
+				<constraints unique="true" uniqueConstraintName="user_name_unq" />
+			</column>
+			<column name="PASSWORD" type="varchar(250)"></column>
+		</createTable>
+		<createSequence sequenceName="actor_id_seq" incrementBy="1" startValue="1" maxValue="999999999999999" />
+	</changeSet>
+</databaseChangeLog>
