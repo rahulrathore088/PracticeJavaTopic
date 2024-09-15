@@ -365,8 +365,8 @@ public class LearnStreams {
 		//obj.PraticeQuestion2();
 		obj.PracticeQuestion3();
 		
-		var monsters =Stream.of(new Sesame("Elmo",false));
-		var people =Stream.of(new Sesame("Abby",true));
+		//var monsters =Stream.of(new Sesame("Elmo",false));
+		//var people =Stream.of(new Sesame("Abby",true));
 		//printPage(monsters, people);
 		
 	}
