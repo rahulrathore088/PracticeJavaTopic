@@ -1,0 +1,19 @@
+server:
+  port: "8081"
+spring:
+  application:
+    name: department-service
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${DEPARTMENT_DB_NAME:departmentdb}
+    username: ${MYSQL_DB_USERNAME:demo}
+    password: ${MYSQL_DB_PASSWORD:rahul}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
