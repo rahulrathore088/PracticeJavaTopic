@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: employee-service
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${EMPLOYE_DB_NAME:employee}
+    username: ${MYSQL_DB_USERNAME:demo}
+    password: ${MYSQL_DB_PASSWORD:rahul}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
