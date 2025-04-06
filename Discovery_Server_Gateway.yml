@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: department-service
+        uri: lb://DEPARTMENT-SERVICE
+        predicates:
+        - Path=/api/department/**
+      - id: employee-service
+        uri: lb://EMPLOYEE-SERVICE
+        predicates:
+        - Path=/api/employee/**  				
+server:
+  port: 7000
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true    	
